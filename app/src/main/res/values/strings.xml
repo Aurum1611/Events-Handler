@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Events Handler</string>
+
+    <string name="register">Register</string>
+    <string name="scanner">Scanner</string>
+
+    <string name="visual_purpose">Image for increasing Visual Appeal</string>
+</resources>

@@ -5,7 +5,10 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.database.FirebaseDatabase;
 import com.internship.project.eventshandler.util.EmailValidator;
+
+import java.util.HashMap;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -22,7 +25,16 @@ public class RegisterActivity extends AppCompatActivity {
             if (!EmailValidator.isEmailValid(email))
                 return;
 
-            // TODO: ADD FirebaseDatabase registration code here
+            HashMap<String, String> userDataStringHashMap = new HashMap<>();
+            userDataStringHashMap.put("first_name", firstName);
+            userDataStringHashMap.put("last_name", lastName);
+            userDataStringHashMap.put("email", email);
+
+            FirebaseDatabase.getInstance().getReference("AllUsers")
+                    .push().setValue(userDataStringHashMap)
+                    .addOnSuccessListener(aVoid -> {
+                        //TODO: ADD code to generate and send QR cod
+                    });
 
         });
     }

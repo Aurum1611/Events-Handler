@@ -5,4 +5,7 @@
     <string name="scanner">Scanner</string>
 
     <string name="visual_purpose">Image for increasing Visual Appeal</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email_address">Email</string>
 </resources>

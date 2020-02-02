@@ -16,7 +16,7 @@ public class SplashScreenActivity extends AppCompatActivity {
 
         new Handler().postDelayed(() -> {
             findViewById(R.id.progress_circular).setVisibility(View.GONE);
-            startActivity(new Intent(SplashScreenActivity.this, MainActivity.class));
+            startActivity(new Intent(SplashScreenActivity.this, RegisterActivity.class));
             finish();
         }, 2 * 1000);
     }
